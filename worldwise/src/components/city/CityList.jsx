@@ -1,11 +1,13 @@
-import React from 'react'
-import styles from "./CityList.module.css"
-import CityItem from './CityItem'
-import Spinner from '../Spinner';
-import Message from "../Message"
-import { useCities } from '../../context/CitiesContext';
+import React from "react";
+import styles from "./CityList.module.css";
+import CityItem from "./CityItem";
+import Spinner from "../Spinner";
+import Message from "../Message";
+import { useCities } from "../../context/CitiesContext";
 
-function CityList({cities,isLoading}) {
+function CityList() {
+
+  const { cities, isLoading } = useCities();
 
   if (isLoading) return <Spinner />;
 
